@@ -1,6 +1,7 @@
-Origin: ebusd.eu
+Origin: https://github.com/john30/ebusd
 Label: ebusd
 Codename: stretch
+Version: 3.2
 Suite: stable
 Architectures: amd64 
 Components: main
