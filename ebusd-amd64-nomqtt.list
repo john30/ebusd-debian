@@ -1,0 +1,2 @@
+deb https://www.ebusd.eu/repos/apt/nomqtt/stretch stretch main
+deb https://www.ebusd.eu/repos/apt/nomqtt/jessie jessie main
