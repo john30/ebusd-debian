@@ -1,0 +1,8 @@
+Origin: ebusd.eu
+Label: ebusd
+Codename: stretch
+Suite: stable
+Architectures: amd64 
+Components: main
+Description: Apt repository for ebusd (without MQTT support).
+SignWith: E8C8272C

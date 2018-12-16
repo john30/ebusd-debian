@@ -1,0 +1,8 @@
+Origin: ebusd.eu
+Label: ebusd
+Codename: jessie
+Suite: stable
+Architectures: amd64 armhf i386 
+Components: main
+Description: Apt repository for ebusd including MQTT support.
+SignWith: E8C8272C

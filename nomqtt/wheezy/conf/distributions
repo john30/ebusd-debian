@@ -1,0 +1,8 @@
+Origin: ebusd.eu
+Label: ebusd
+Codename: wheezy
+Suite: stable
+Architectures: armhf 
+Components: main
+Description: Apt repository for ebusd (without MQTT support).
+SignWith: E8C8272C
