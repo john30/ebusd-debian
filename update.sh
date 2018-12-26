@@ -46,7 +46,7 @@ EOF
   exit
 fi
 
-for file in ${releasesdir}/ebus/releases/ebusd-${version}_*; do
+for file in ${releasesdir}/ebusd-${version}_*; do
   if [ "${file#*armv6l}" != "$file" ]; then
     continue
   fi
