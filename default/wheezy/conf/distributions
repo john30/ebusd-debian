@@ -1,7 +1,7 @@
 Origin: https://github.com/john30/ebusd
 Label: ebusd
 Codename: wheezy
-Version: 3.2
+Version: 3.3
 Suite: stable
 Architectures: armhf 
 Components: main

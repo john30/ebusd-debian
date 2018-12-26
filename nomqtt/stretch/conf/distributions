@@ -1,9 +1,9 @@
 Origin: https://github.com/john30/ebusd
 Label: ebusd
 Codename: stretch
-Version: 3.2
+Version: 3.3
 Suite: stable
-Architectures: amd64 
+Architectures: amd64 armhf 
 Components: main
 Description: Apt repository for ebusd (without MQTT support).
 SignWith: E8C8272C
