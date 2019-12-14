@@ -1,9 +1,9 @@
 Origin: https://github.com/john30/ebusd
 Label: ebusd
 Codename: wheezy
-Version: 3.3
+Version: 3.4
 Suite: stable
 Architectures: armhf 
 Components: main
 Description: Apt repository for ebusd (without MQTT support).
-SignWith: E8C8272C
+SignWith: ! sign.sh

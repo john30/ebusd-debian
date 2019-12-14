@@ -1,9 +1,9 @@
 Origin: https://github.com/john30/ebusd
 Label: ebusd
 Codename: jessie
-Version: 3.3
+Version: 3.4
 Suite: stable
 Architectures: amd64 armhf i386 
 Components: main
 Description: Apt repository for ebusd including MQTT support.
-SignWith: E8C8272C
+SignWith: ! sign.sh
