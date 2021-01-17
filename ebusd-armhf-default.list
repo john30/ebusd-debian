@@ -1,3 +1,1 @@
 deb https://www.ebusd.eu/repos/apt/default/stretch stretch main
-deb https://www.ebusd.eu/repos/apt/default/jessie jessie main
-deb https://www.ebusd.eu/repos/apt/default/wheezy wheezy main
