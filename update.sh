@@ -13,7 +13,7 @@ if [ -n "$reset" ]; then
   dir=`pwd`
   echo "distributions:"
   for variant in default nomqtt; do
-    for dist in stretch jessie wheezy; do
+    for dist in stretch; do
       mkdir -p "${variant}/${dist}" 2>/dev/null
       (cd "${variant}/${dist}" && rm -rf db dists pool)
       cat >"${variant}/${dist}/conf/options" <<EOF
