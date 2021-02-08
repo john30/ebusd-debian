@@ -1,9 +1,9 @@
 Origin: https://github.com/john30/ebusd
 Label: ebusd
 Codename: stretch
-Version: 21.1
+Version: 21.2
 Suite: stable
-Architectures: amd64 arm64 armhf i386 
+Architectures: amd64 arm64 armel armhf i386 
 Components: main
 Description: Apt repository for ebusd (without MQTT support).
 SignWith: ! sign.sh

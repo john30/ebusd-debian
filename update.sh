@@ -13,7 +13,7 @@ if [ -n "$reset" ]; then
   dir=`pwd`
   echo "distributions:"
   for variant in default nomqtt; do
-    for dist in stretch; do
+    for dist in jessie stretch buster; do
       mkdir -p "${variant}/${dist}" 2>/dev/null
       (cd "${variant}/${dist}" && rm -rf db dists pool)
       cat >"${variant}/${dist}/conf/options" <<EOF
@@ -40,6 +40,7 @@ Components: main
 Description: $descr
 SignWith: ! sign.sh
 EOF
+      echo "deb https://www.ebusd.eu/repos/apt/${variant}/${dist} ${dist} main" > ebusd-${variant}-${dist}.list
       echo "${variant}/${dist}: $archs"
     done
   done
