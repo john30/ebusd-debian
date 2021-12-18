@@ -55,7 +55,7 @@ for file in ${releasesdir}/ebusd-${version}_*; do
     continue
   fi
   dist=`echo $file|sed -e 's#^.*-##' -e 's#\.deb$##' -e 's#_.*$##'`
-  arch=`echo $file|sed -e 's#^.*ebusd-[^_]*_##' -e 's#-.*$##'`
+  arch=`echo $file|sed -e 's#^.*ebusd-[^_]*_##' -e 's#-.*$##' -e 's#^386$#i386#' -e 's#^armv7$#armhf#'`
   if [ "${file##*mqtt}" = "$file" ]; then
     variant=nomqtt
   else
