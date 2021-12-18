@@ -1,9 +1,9 @@
 Origin: https://github.com/john30/ebusd
 Label: ebusd
-Codename: wheezy
-Version: 3.4
+Codename: bullseye
+Version: 21.3
 Suite: stable
-Architectures: armhf 
+Architectures: amd64 arm64 armhf i386 
 Components: main
 Description: Apt repository for ebusd including MQTT support.
 SignWith: ! sign.sh

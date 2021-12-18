@@ -13,8 +13,8 @@ if [ -n "$reset" ]; then
   dir=`pwd`
   echo "distributions:"
   for variant in default nomqtt; do
-    for dist in jessie stretch buster; do
-      mkdir -p "${variant}/${dist}" 2>/dev/null
+    for dist in stretch buster bullseye; do
+      mkdir -p "${variant}/${dist}/conf" 2>/dev/null
       (cd "${variant}/${dist}" && rm -rf db dists pool)
       cat >"${variant}/${dist}/conf/options" <<EOF
 basedir ${dir}/${variant}/${dist}
@@ -26,7 +26,7 @@ EOF
         descr="Apt repository for ebusd including MQTT support."
         varsuffix="_mqtt"
       fi
-      archs=`ls ${releasesdir}/ebusd-${version}_*-${dist}${varsuffix}*|sed -e 's#^.*ebusd-[^_]*_##' -e 's#-.*$##'|egrep -v armv6l|tr "\n" " "`
+      archs=`ls ${releasesdir}/ebusd-${version}_*-${dist}${varsuffix}*|sed -e 's#^.*ebusd-[^_]*_##' -e 's#-.*$##' -e 's#^386$#i386#' -e 's#^armv7$#armhf#'|egrep -v armv6l|sort|tr "\n" " "`
       rm -f "${variant}/${dist}/conf/sign.sh"
       cp -a sign.sh "${variant}/${dist}/conf/sign.sh"
       cat >"${variant}/${dist}/conf/distributions"<<EOF
@@ -40,7 +40,7 @@ Components: main
 Description: $descr
 SignWith: ! sign.sh
 EOF
-      echo "deb https://www.ebusd.eu/repos/apt/${variant}/${dist} ${dist} main" > ebusd-${variant}-${dist}.list
+      echo "deb https://repo.ebusd.eu/apt/${variant}/${dist} ${dist} main" > ebusd-${variant}-${dist}.list
       echo "${variant}/${dist}: $archs"
     done
   done
