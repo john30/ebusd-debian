@@ -1,7 +1,7 @@
 Origin: https://github.com/john30/ebusd
 Label: ebusd
 Codename: bullseye
-Version: 22.1
+Version: 22.2
 Suite: stable
 Architectures: amd64 arm64 armhf i386 
 Components: main
