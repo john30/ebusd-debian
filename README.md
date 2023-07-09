@@ -7,9 +7,9 @@ Debian multi-architecture and multi-distribution package repository for ebusd.
   `wget -qO - https://raw.githubusercontent.com/john30/ebusd-debian/master/ebusd.gpg.key|sudo apt-key add -`
 
 2. Copy the right source list for your distribution to `/etc/apt/sources.list.d/`, i.e. replace `<DIST>` with either:  
-    * `bullseye` (Debian 11 or higher)
-    * `buster` (Debian 10), or
-    * `stretch` (Debian 9)
+    * `bookworm` (Debian 12 or higher)
+    * `bullseye` (Debian 11), or
+    * `buster` (Debian 10)
 
    in this command line:  
    `sudo wget -O /etc/apt/sources.list.d/ebusd.list https://raw.githubusercontent.com/john30/ebusd-debian/master/ebusd-default-<DIST>.list`

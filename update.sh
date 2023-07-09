@@ -4,8 +4,14 @@ if [ "x$1" = "x-r" ]; then
   reset=1
   shift
 fi
+if [ "x$1" = "x-R" ]; then
+  reset=2
+  shift
+fi
 if [ "x$1" = "x" ]; then
-  echo "Usage: update.sh [-r] releasesdir"
+  echo "Usage: update.sh [-r|-R] releasesdir"
+  echo "  with -r for rebuilding the conf files"
+  echo "  and -R for dropping existing db files and stuff (hard reset)"
   exit 1
 fi
 releasesdir="$1"
@@ -13,9 +19,11 @@ if [ -n "$reset" ]; then
   dir=`pwd`
   echo "distributions:"
   for variant in default nomqtt; do
-    for dist in stretch buster bullseye; do
+    for dist in buster bullseye bookworm; do
       mkdir -p "${variant}/${dist}/conf" 2>/dev/null
-      (cd "${variant}/${dist}" && rm -rf db dists pool)
+      if [[ "x$reset" = "x2" ]]; then
+        (cd "${variant}/${dist}" && rm -rf db dists pool)
+      fi
       cat >"${variant}/${dist}/conf/options" <<EOF
 basedir ${dir}/${variant}/${dist}
 EOF

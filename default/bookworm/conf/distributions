@@ -1,9 +1,9 @@
 Origin: https://github.com/john30/ebusd
 Label: ebusd
-Codename: stretch
-Version: 23.1
+Codename: bookworm
+Version: 23.2
 Suite: stable
 Architectures: amd64 arm64 armhf i386 
 Components: main
-Description: Apt repository for ebusd (without MQTT support).
+Description: Apt repository for ebusd including MQTT support.
 SignWith: ! sign.sh
