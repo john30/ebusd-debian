@@ -4,7 +4,10 @@ Debian multi-architecture and multi-distribution package repository for ebusd.
 ## Usage
 
 1. Add the GPG key to your trusted apt sources:  
-  `wget -qO - https://raw.githubusercontent.com/john30/ebusd-debian/master/ebusd.gpg.key|sudo apt-key add -`
+   * For `bookworm` (Debian 12 or higher):  
+    `sudo mkdir -p /etc/apt/keyrings && sudo wget -q -O /etc/apt/keyrings/ebusd.gpg https://raw.githubusercontent.com/john30/ebusd-debian/master/ebusd.gpg`
+   * For `bullseye` (Debian 11) or `buster` (Debian 10):  
+    `wget -qO - https://raw.githubusercontent.com/john30/ebusd-debian/master/ebusd.gpg.key|sudo apt-key add -`
 
 2. Copy the right source list for your distribution to `/etc/apt/sources.list.d/`, i.e. replace `<DIST>` with either:  
     * `bookworm` (Debian 12 or higher)

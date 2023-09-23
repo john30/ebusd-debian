@@ -1,1 +1,1 @@
-deb https://repo.ebusd.eu/apt/default/bookworm bookworm main
+deb [signed-by=/etc/apt/keyrings/ebusd.gpg] https://repo.ebusd.eu/apt/default/bookworm bookworm main
