@@ -48,7 +48,11 @@ Components: main
 Description: $descr
 SignWith: ! sign.sh
 EOF
-      echo "deb https://repo.ebusd.eu/apt/${variant}/${dist} ${dist} main" > ebusd-${variant}-${dist}.list
+      signby=''
+      if [ "$dist" = "bookworm" ]; then
+        signby=' [signed-by=/etc/apt/keyrings/ebusd.gpg]'
+      fi
+      echo "deb ${signy}https://repo.ebusd.eu/apt/${variant}/${dist} ${dist} main" > ebusd-${variant}-${dist}.list
       echo "${variant}/${dist}: $archs"
     done
   done
