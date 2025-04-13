@@ -52,7 +52,7 @@ EOF
       if [ "$dist" = "bookworm" ]; then
         signby=' [signed-by=/etc/apt/keyrings/ebusd.gpg]'
       fi
-      echo "deb ${signy}https://repo.ebusd.eu/apt/${variant}/${dist} ${dist} main" > ebusd-${variant}-${dist}.list
+      echo "deb${signby} https://repo.ebusd.eu/apt/${variant}/${dist} ${dist} main" > ebusd-${variant}-${dist}.list
       echo "${variant}/${dist}: $archs"
     done
   done
